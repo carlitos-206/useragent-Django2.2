@@ -4,7 +4,9 @@ This script allows you to view information from the User Agent who arrives to yo
 Django web app. 
 
 # Requirements:
-Python 3.8+  DJango 2.2+  Virtual Env.
+Python 3.8+ 
+DJango 2.2+
+Virtual Env.
 
 # Pip requirements:
 
