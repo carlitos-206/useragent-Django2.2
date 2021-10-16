@@ -43,19 +43,19 @@ def index(request):
     print(f"Device Name: {device}")
 
 #THIS LOOPS THROUGH ALL POTENTIAL SCREEN TYPE BY RETURNING DIMENSIONS OF A SCREEN USING THE screeninfo PACKAGE
-    for m in get_monitors():
-        if m.width < 768:
-            global mobile
-            mobile+=1
-            print(f"Screen Type - Mobile: {m.width} X {m.height}")
-        elif 768 < m.width < 1024:
-            global tablet
-            tablet+=1
-            print(f"Screen Type - Tablet: {m.width} X {m.height}")
-        elif m.width>1024:
-            global monitor
-            monitor+=1
-            print(f"Screen Type - Monitor: {m.width} X {m.height}")
+    # for m in get_monitors():
+    #     if m.width < 768:
+    #         global mobile
+    #         mobile+=1
+    #         print(f"Screen Type - Mobile: {m.width} X {m.height}")
+    #     elif 768 < m.width < 1024:
+    #         global tablet
+    #         tablet+=1
+    #         print(f"Screen Type - Tablet: {m.width} X {m.height}")
+    #     elif m.width>1024:
+    #         global monitor
+    #         monitor+=1
+    #         print(f"Screen Type - Monitor: {m.width} X {m.height}")
 
 #THIS IS DJANGO 2.2 INBUILT FUNCTION. THIS ALLOWS TO RETRIVE THE IP ADDRESS MAKING THE REQUEST
     address=request.META.get("REMOTE_ADDR")
@@ -80,7 +80,19 @@ def index(request):
     if user_agent.is_bot == True:
         print("THE MITCHELLS GOT ME")
         return HttpResponse("NO BOTS")
-
+#THIS MIGHT BE A MORE EFFICIENT WAY TO RETRIVE DEVICE INFORMATION 
+    if user_agent.is_bot == True:
+        print("THE MITCHELLS GOT ME")
+        return HttpResponse("NO BOTS")
+    if user_agent.is_mobile == True:
+        global mobile
+        mobile+=1
+    if user_agent.is_tablet == True:
+        global tablet
+        tablet+=1
+    if user_agent.is_pc == True:
+        global monitor
+        monitor+=1
 #THIS SHOWS THE REQUEST NUMBER GIVING THEM ONE MORE UNIQUE ID 
     ticket=mobile+tablet+monitor
     print(f"Ticket #{ticket}")
