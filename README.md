@@ -1,6 +1,6 @@
 # User Agent - Django 2.2
 # 
-# This script allows you to view information from the User Agent who arrives to your
+This script allows you to view information from the User Agent who arrives to your
 # Django web app. 
 #
 # Requirements:
