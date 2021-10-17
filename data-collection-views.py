@@ -61,7 +61,8 @@ def index(request):
     address=request.META.get("REMOTE_ADDR")
     print(f"IP: {address}")
 
-#PASS THE {adress} VARIABLE UNTO THE GEO LOCATION, THE API_KEY IS ALWAYS 'free"
+#PASS THE {adress} VARIABLE UNTO THE GEO LOCATION, THE API_KEY IS ALWAYS 'free'
+#THIS BELONGS TO THIS PACAKAGE ip2geotools.databases.noncommercial
     response = DbIpCity.get(f"{address}", api_key='free')
     print(f"User Location: {response.city}, {response.region} {response.country}")
     print(f"User Exact Location: Lattitude {response.latitude} Longitude {response.longitude}")
@@ -78,7 +79,7 @@ def index(request):
     print(f"Touch Capabilities: {user_agent.is_touch_capable}")
     print(f"Bot Request: {user_agent.is_bot}")
     if user_agent.is_bot == True:
-        print("THE MITCHELLS GOT ME")
+        print("THE MITCHELLS GOT ME") #MITCHELLS vs THE MACHINES
         return HttpResponse("NO BOTS")
 #THIS MIGHT BE A MORE EFFICIENT WAY TO RETRIVE DEVICE INFORMATION 
     if user_agent.is_bot == True:
