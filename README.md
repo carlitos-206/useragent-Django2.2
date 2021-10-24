@@ -1,7 +1,7 @@
 # User Agent - Django 2.2
 # 
-This script allows you to view information from the User Agent who arrives to your
-django web app. 
+This script allows you to view and log the information from the User who arrives to your
+django web app without them creting an account. 
 
 # Requirements:
 Python 3.8+ 
