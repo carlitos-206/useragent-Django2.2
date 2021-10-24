@@ -1,10 +1,9 @@
 # User Agent - Django 2.2
-# 
 This script allows you to view and log the information from the User who arrives to your
-django web app without them creting an account. 
+django web app without them creating an account. 
 
 # Requirements:
-Python 3.8+ 
+Python 3.9+ 
 DJango 2.2+
 Virtual Env.
 
