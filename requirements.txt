@@ -37,6 +37,8 @@ lxml==4.6.3
 maxminddb==2.2.0
 mccabe==0.6.1
 multidict==5.2.0
+nodejs==0.1.1
+optional-django==0.1.0
 outcome==1.1.0
 packaging==21.0
 pip-review==1.1.0
